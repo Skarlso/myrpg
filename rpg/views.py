@@ -1,6 +1,5 @@
 from django.shortcuts import render_to_response
 from django.contrib.auth import authenticate, login
-from django.template.context_processors import csrf
 from django.template import RequestContext
 
 def login_user(request):
