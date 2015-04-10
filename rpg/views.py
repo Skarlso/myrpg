@@ -4,8 +4,6 @@ from django.template.context_processors import csrf
 from django.template import RequestContext
 
 def login_user(request):
-    c = {}
-    c.update(csrf(request))
     state = "Please log in below..."
     username = password = ''
     if request.POST:
