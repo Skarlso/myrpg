@@ -7,5 +7,5 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^login/$', 'rpg.views.login_user'),
+    url(r'^rpg/', include('rpg.urls')),
 ]

@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Log in</title>
+<title>{{title}}</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <style>
 body{
@@ -11,17 +11,8 @@ body{
 </style>
 </head>
 <body>
-	{{ state }}
-	<form action="." method="post">{% csrf_token %}
-		{% if next %}
-		<input type="hidden" name="next" value="{{ next }}" />
-		{% endif %}
-		username:
-		<input type="text" name="username" value="{{ username}}" /><br />
-		password:
-		<input type="password" name="password" value="" /><br />
-
-		<input type="submit" value="Log In" />
-	</form>
+	Welcome to my humble site.</br>
+	<a href="login">Login</a></br>
+	<a href="registration">Registration</a></br>
 </body>
 </html>
