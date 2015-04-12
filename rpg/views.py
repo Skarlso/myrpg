@@ -22,11 +22,11 @@ def login_user(request):
         else:
             state = "Your username and/or password were incorrect."
 
-    return render_to_response('auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))
+    return render_to_response('rpg/auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))
 
 def index(request):
 	title = "My RPG"
-	return render_to_response('index.html', {'title':title})
+	return render_to_response('rpg/index.html', {'title':title})
 
 def registration(request):
 	state = "Please register."
@@ -45,4 +45,4 @@ def registration(request):
 			except:
 				state = "Unexpected error occured: %s" % sys.exc_info()[0]
 
-	return render_to_response('registration.html', {'state': state}, context_instance = RequestContext(request))
+	return render_to_response('rpg/registration.html', {'state': state}, context_instance = RequestContext(request))
